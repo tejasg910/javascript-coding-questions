@@ -1,37 +1,32 @@
-const str = "This is javascript code";
+// Q2: Given a string, reverse each word in the sentence
 
-const output = "sihT si tpircsavaj edoc ";
+// let str = "this is normal string";
+// // let output = "siht si lamron gnirts"
 
-const stringarr = str.split(" ");
-const outputArr = [];
-for (i of stringarr) {
-  let str = "";
-  const newstr = i;
-  for (let i = newstr.length - 1; i >= 0; i--) {
-    str += newstr[i];
-  }
-  outputArr.push(str);
-}
+// let output = "";
 
-const outputString = outputArr.join(" ");
+// let arr = str.split(" ");
 
-console.log(outputString);
+// arr.forEach((item) => {
+//   let newarr = item.split("");
+//   let rev = newarr.reverse().join("");
+//   output += `${rev} `;
+// });
 
-const outPutArr = str.split(" ").map((item) => {
-  let temp = "";
+// console.log(output);
+
+let str = "this is normal string";
+let output = "";
+
+let arr = str.split(" ");
+let revArr = [];
+arr.forEach((item) => {
+  let rev = "";
   for (let i = item.length - 1; i >= 0; i--) {
-    temp += item[i];
+    rev += item[i];
   }
-
-  return temp;
+  revArr.push(rev);
 });
 
-const newoutput = outPutArr.join(" ");
-
-console.log(newoutput);
-
-const outPutString = str
-  .split(" ")
-  .map((item) => item.split("").reverse().join(""));
-
-console.log(outPutString.join(" "));
+const revString = revArr.join(" ");
+console.log(revString);
