@@ -30,3 +30,31 @@ arr.forEach((item) => {
 
 const revString = revArr.join(" ");
 console.log(revString);
+
+//without inbuilt functions
+
+const sampleStr = "This is a string and we have to reverse it";
+
+function reverseString(str) {
+  const arr = str.match(/[a-z]+/gi);
+
+  const revArr = arr.map((item, index) => {
+    let rev = "";
+
+    for (let i = item.length - 1; i >= 0; i--) {
+      rev += item[i];
+    }
+    return rev;
+  });
+
+  let reverseString = "";
+
+  revArr.forEach((item, index) => {
+    reverseString += item + " ";
+  });
+
+  return reverseString;
+}
+
+const reverse = reverseString(sampleStr);
+console.log(reverse);
